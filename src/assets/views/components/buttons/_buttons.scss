@@ -1,0 +1,172 @@
+
+/*
+ * 1. Buttons
+*/
+
+// $button_icon_width: 30px;
+// $button_height: 1.5*$l_h_base;
+$button_border_width: 1px;
+
+
+
+.button {
+    
+    @extend %transition;
+    @include flex(center, center);
+    display: inline-flex;
+    position: relative;
+    width: auto; // width: 100%;
+    font-family: $font_family;
+    overflow: hidden;    
+}
+
+.button-more {
+    // height: ;
+    height: calc( 2* #{$l_h} + 2* #{$button_border_width} );
+    padding: 0 2em;
+    border-radius: 1*$l_h;
+
+    border: $button_border_width solid $borders;
+    @include font_size_pro('base');
+    line-height: $l_h;
+    font-weight: bold;
+    color: $text;
+
+    i {
+        @include flex(center, center);
+        margin-left: 0.5em;
+        svg {
+            path {
+                @extend %transition;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: $text;
+        border-color: $text;
+        color: $white;
+        i {
+            svg {
+                path {
+                    stroke: $white;
+                }
+            }
+        }        
+    }
+}
+
+.button-buy {
+    // max-width: 150px;
+    // height: $button_height;
+    // background: $accent_light;
+    // color: $grey_super_light;
+
+    // @include font_size_pro('small');
+    // @include typo('button');
+
+    // padding-right: $button_icon_width;
+
+    // @include button_with_icon();
+
+    span {
+        position: relative;
+        z-index: $zindex_icon;
+    }
+
+    i {
+        // @include pseudoelement_right_top(0, 0);
+        // width: $button_icon_width;
+        // height: 100%;
+        // line-height: $button_height;
+        // @include font_size_pro('h5');
+    }
+
+    // Effect on hover - sliding bg
+    &:before {
+        // @include pseudoelement_left_top(-$button_icon_width, 0);
+        // @include pseudoelement_left_top(-110%, 0);
+        // width: 100%;
+        // height: 50%;
+
+        // background-color: $accent_alt_light;
+        // transform: skewX(15deg);
+        // @extend %transition_fast;    
+    }
+    &:after {
+        // @include pseudoelement_left_top(-$button_icon_width, 50%);
+        // @include pseudoelement_left_top(-110%, 50%);
+        // width: 100%;
+        // height: 50%;
+
+        // background-color: $accent_alt_light;
+        // transform: skewX(-15deg);
+        // @extend %transition_fast;
+    }    
+
+    &:hover,
+    &.hover {
+        &:before {
+            // left: -1.1* $button_icon_width;
+        }
+        &:after {
+            // left: -1.1* $button_icon_width;     
+        }
+    }
+    &:active,
+    &.active {
+
+    }
+    &:disabled,
+    &.disabled{
+        // background-color: $grey_lighter;
+        &:hover {
+            &:after,
+            &:before {
+                display: none;
+            }
+        }
+    } 
+
+}
+
+
+
+
+.button-promo {
+    // max-width: 200px;
+    // height: 2*$l_h_base;
+    // background: $accent_light;    
+    // color: $grey_super_light;
+
+    // @include font_size_pro('h5');
+    // @include typo('button');
+    // text-transform: none;
+
+    // @include grad('button');
+    // @include button_with_icon();
+
+
+    // i {
+    //     @include font_size_pro('base');
+    //     color: transparent;
+    
+    // }
+
+    &:hover,
+    &.hover {
+        // background-color: $accent_alt_light;
+    }
+    &:active,
+    &.active {
+
+    }
+    &:disabled,
+    &.disabled{
+        // background-color: $grey_lighter;
+    } 
+   
+}
+
+
+

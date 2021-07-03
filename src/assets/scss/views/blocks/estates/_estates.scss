@@ -1,0 +1,85 @@
+/*
+ * Blocks vars
+ * Block and elements styles
+ * Other styles (Not block elems, but associated with it)
+ * Media rules - Mobile First, use min-width
+ * Default states
+ */
+
+// Block vars
+// $blocknameItemPaddings: 20px;
+// $blocknameDecorBg: $globalColor;
+
+.price {
+    margin-top: 2px;
+    @include font_size_pro('base');
+    line-height: $l_h_medium;
+    color: $text;
+}
+
+// Block and elements
+.estates {
+    // padding: 10px;
+
+    &:hover {
+// estates__item-
+    }
+    // Block Elements    
+    &__item {
+        &-title {
+            // Default rules
+            @include font_size_pro('h3');
+            line-height: $l_h_medium;
+            font-weight: bold;
+            color: $text;
+
+        }
+      
+        &-address {
+            margin-top: 2px;
+            @include font_size_pro('base');
+            line-height: $l_h_medium;
+            color: $text;
+            color: $green;
+        }
+
+
+
+        &-text {
+
+        }       
+        &-image {
+            img {  }
+        }
+    }
+
+    // Blocks Modificators
+    &--success &__item {
+        &-title {
+            // Ovverride rules
+        }
+    }
+
+    // Inheritance (for components)
+    .otherblock {
+        // Ovverride rules
+    }
+}
+
+// Not block elems, but associated with it
+.blockname-helperelement {  
+    
+}
+
+// Media rules - Mobile First, use min-width
+// @media ( min-width: $screen-sm-min ) {
+
+//     .blockname {
+//         // etc..
+//     }  
+// }
+
+// Default states
+.blockname {
+    display: none;
+}

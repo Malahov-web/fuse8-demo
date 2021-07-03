@@ -1,4 +1,128 @@
-body {
+@charset 'utf-8';
 
-    background-color: #eee;
+/*
+ * Table of contents   Содержание
+ *
+ *  0. Imports
+ *  1. General Vars, Mixins, Extends
+
+ *  14.
+ *
+ */
+
+
+@import 'services/services'; // services and helpers functions
+@import 'libs';         // external libs
+@import 'fonts';        // fonts add
+@import 'mwgrid';       // layout framework
+
+@import 'vars';
+@import 'mixins';
+@import 'base';         // base, 
+
+@import 'plugins/plugins'; // external plugins custom styles
+// @import 'components';   // moved to -> _base
+@import 'blocks&components';   // moved to -> _base
+// @import 'print';     // print v styles
+
+$accent: #3c9;
+$accent: #9c3;
+
+
+/* 1. General, structure
+ * **********************************************************************
+ *  
+*/
+
+
+.section {
+
 }
+
+
+
+.section__footer {
+    margin-top: 2.5*$l_h;
+}
+
+.page-title {
+// font-family: Open Sans;
+// font-style: normal;
+// font-weight: bold;
+// font-size: 36px;
+// line-height: 49px;
+// text-align: center;
+
+// color: #45852D;
+
+    @include font_size_pro('h1');
+    line-height: 1.36em; // ?
+    line-height: $l_h_head;
+    font-weight: bold;
+    text-align: center;
+    color: $green;
+}
+
+
+/* 2. Header
+ * **********************************************************************
+ *  
+*/
+
+.header{
+
+}
+.header-top{
+
+}
+.logo{
+
+    img{
+        width: auto; max-width: 100%; height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+   
+    
+} /* media end */
+
+
+
+
+// 
+
+
+.section-title {
+    padding-top: 1.5*$l_h;
+}
+
+.section-filter {
+    padding-top: 2*$l_h;
+}
+
+.section-estates {
+    padding-top: 2*$l_h;
+}
+
+.badge {
+    padding: 1/2*$l_h_medium  1em  1/2*$l_h_medium;
+    background-color: $borders;
+
+    @include font_size_pro('smaller'); // 12/16
+    line-height: $l_h_medium;
+    font-weight: bold;
+    text-align: center;
+    color: $white;
+
+    // Mods
+    &--type--independent-living {
+        background-color: $orange;
+    }
+    &--type--support-available {
+        background-color: $green_alt;
+    }    
+
+
+}
+

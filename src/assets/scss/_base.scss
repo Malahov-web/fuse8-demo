@@ -12,7 +12,9 @@
 */
 
 html{
-    font-size: 14px;
+    // font-size: 14px;
+    // font-size:
+    @include font_size_pro('base');
     height: 100%;
 }
 body{
@@ -50,7 +52,7 @@ h1, h2, h3, h4,
 }
 h1, .h1{
     font-size: $font_h1;
-    letter-spacing: $l_s_big;
+    // letter-spacing: $l_s_big;
 }
 h2, .h2{
     font-size: $font_h2;

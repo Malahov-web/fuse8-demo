@@ -23,8 +23,21 @@ $grey_super_light: lighten($grey, 35%);  //  #f5f4f5
 $grey_dark: darken($grey, 14%); // #77757b;
 $grey_super_dark: darken($grey, 40%); // #353437
 
+
+
+// REAL Colors:
+
+$text: #363636;
+$green: #45852D;
+$green_alt: #006F79;
+$orange: #EC6608;
+$card_bg: #F8F8F8;
+$borders: #D8D8D8;
+
+
+
 // Semantic colors
-$text: $grey_super_dark;
+// $text: $grey_super_dark;
 $white: #ffffff;
 $black: #000000;
 
@@ -54,13 +67,15 @@ $font_forms_elements: $fb;
 
 
 $l_s:  0.025em;
-$l_s_big:  0.05em;
+// $l_s_big:  0.05em;
+$l_s_neg: -0.03em;
 
 $l_h : 1.5em;
+$l_h_medium : 1.35em;
 $l_h_head: 1.2em;
 
-$font_family : "Roboto",  Verdana,  Arial, sans-serif;
-$font_family_head : "Roboto",  Tahoma,  Arial, sans-serif;
+$font_family : "Open Sans", "Roboto",  Verdana,  Arial, sans-serif;
+$font_family_head : "Open Sans", "Roboto",  Tahoma,  Arial, sans-serif;
 
 
 // 3. Borders
@@ -89,6 +104,9 @@ $transition_duration: 0.25s;
 // . ?
 
 $font_units_negative: 2; // font units less then 'base'
+// $font_size_names: ();
+
+// TODO: delete, and turn off _set_fonts_objects
 $font_size_names: (  
     'smaller',
     'small',
@@ -103,3 +121,47 @@ $font_size_names: (
 );
 
 $fonts: ();
+
+
+// // Real font sizes from Design (designer don't use modular scale)
+$fonts : (
+
+    mv_: (
+        smaller: 12,
+        small: 14,
+        base: 16,
+        h4: 18,
+        h3: 20,
+        h2: 24,
+        h1: 28,
+    ), 
+
+    tb_: (
+        smaller: 12,
+        small: 14,
+        base: 16,
+        h4: 18,
+        h3: 20,
+        h2: 26,
+        h1: 36,
+    ), 
+    ds_: (
+        smaller: 12,
+        small: 14,
+        base: 16,
+        h4: 18,
+        h3: 20,
+        h2: 26,
+        h1: 36,
+    ), 
+    hd_: (
+        smaller: 12,
+        small: 14,
+        base: 16,
+        h4: 18,
+        h3: 20,
+        h2: 26,
+        h1: 36,
+    )
+     
+);

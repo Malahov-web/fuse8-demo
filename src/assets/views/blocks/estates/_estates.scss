@@ -1,0 +1,134 @@
+/*
+ * Blocks vars
+ * Block and elements styles
+ * Other styles (Not block elems, but associated with it)
+ * Media rules - Mobile First, use min-width
+ * Default states
+ */
+
+// Block vars
+$estatesItemPaddings: 20px;
+// $blocknameDecorBg: $globalColor;
+
+// Block and elements
+.estates {
+
+    &-inner {
+        margin-bottom: -1.5*$l_h;
+    }
+
+    &:hover {
+
+    }
+    // Block Elements    
+    &__item-outer {
+        margin-bottom: 1.5*$l_h;        
+    }
+    &__item {
+        position: relative;
+        background-color: $card_bg;
+        border: 1px solid $borders;
+
+        &-image-outer {
+            // position: relative;
+            display: block;
+            // all card is link
+            &:after {
+                @include pseudoelement_left_top(0, 0);
+                width: 100%;
+                height: 100%;
+                // background-color: transparentize($text, 1-0.5); // dev test
+            }            
+        }
+        &-image {
+            // 377 x 227
+            position: relative;
+            padding-bottom: 227/337* 100%;
+            overflow: hidden;
+            img {
+                position: absolute;
+                @include size(100%, 100%);
+                object-fit: cover;
+                @extend %transition;
+            }
+        }
+
+        &-badge {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        &-content {
+            padding: $estatesItemPaddings;   
+            padding-bottom: 17px;         
+        }
+        &-title {
+            // Default rules
+            @include font_size_pro('h3');
+            line-height: $l_h_medium;
+            font-weight: bold;
+            color: $text;
+
+        }
+        &-address {
+            margin-top: 2px;
+            @include font_size_pro('base');
+            line-height: $l_h_medium;
+            color: $text;
+        }
+
+        &-price {
+            margin-top: 1em;
+            @include font_size_pro('base');
+            line-height: $l_h_medium;
+            color: $text;
+        }
+
+        &-notice {
+            margin-top: 0.5em;
+            @include font_size_pro('small');
+            line-height: $l_h_medium;
+            color: $text;
+        }  
+    }
+
+    // states
+    &__item {
+        &:hover  &-image {
+            img {
+                transform: scale(1.08);
+            }
+        }
+    }    
+
+    // Blocks Modificators
+    &--success &__item {
+        &-title {
+            // Ovverride rules
+        }
+    }
+
+    // Inheritance (for components)
+    .otherblock {
+        // Ovverride rules
+    }
+}
+
+// Not block elems, but associated with it
+.blockname-helperelement {  
+    
+}
+
+// Media rules - Mobile First, use min-width
+// @media ( min-width: $screen-sm-min ) {
+
+//     .blockname {
+//         // etc..
+//     }  
+// }
+
+// Default states
+.blockname {
+    display: none;
+}

@@ -8,8 +8,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "bourbon": "^7.0.0",
     "core-js": "^3.6.5",
     "mw-grid": "^2.7.1",
+    "normalize.css": "^8.0.1",
     "vue": "^2.6.11",
     "vuex": "^3.4.0"
   },

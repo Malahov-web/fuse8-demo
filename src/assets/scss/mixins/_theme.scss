@@ -38,9 +38,13 @@
 //
 // settings:
 $settings_font_size_pro: (
-    round_values: 1, // [0, 1], boolean
+    round_values: 0, // [0, 1], boolean
 );
 //
+
+ @debug "$fonts before font_size_pro !!!!!:";  
+ @debug $fonts;  
+
 
 @mixin font_size_pro ($type) {
 
@@ -60,17 +64,16 @@ $settings_font_size_pro: (
 
             // @media (min-width: #{map-get($devices, $fonts_device)}px) {                
             @media (min-width: #{  bp($fonts_device) }px) {                
-                // font-size: map-get($fonts_obj, $type);
-
 
                 $font_size: map-get($fonts_obj, $type);
-                // font-size: $font_size;
-                // font-size:   round($font_size) ;
 
                 @if  map-get($settings_font_size_pro, round_values) == 1  {
-                    font-size:   round($font_size) ;
+                    // font-size:   round($font_size) ;
+                    font-size:   #{round($font_size)}px;
                 } @else {
-                    font-size: $font_size;
+                    // font-size: $font_size;
+                    // font-size: $font_size+'px'; // -
+                    font-size: #{$font_size}px; 
                 }
 
             }
