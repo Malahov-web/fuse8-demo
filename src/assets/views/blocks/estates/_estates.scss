@@ -26,8 +26,10 @@ $estatesItemPaddings: 20px;
     }
     &__item {
         position: relative;
+        height: 100%;
         background-color: $card_bg;
         border: 1px solid $borders;
+        @extend %transition;
 
         &-image-outer {
             // position: relative;
@@ -43,7 +45,7 @@ $estatesItemPaddings: 20px;
         &-image {
             // 377 x 227
             position: relative;
-            padding-bottom: 227/337* 100%;
+            padding-bottom: 227/377* 100%;
             overflow: hidden;
             img {
                 position: absolute;
@@ -57,6 +59,8 @@ $estatesItemPaddings: 20px;
             position: absolute;
             right: 0;
             bottom: 0;
+            @include width(auto, auto, 100%);
+            overflow: hidden;
         }
 
         &-content {
@@ -65,14 +69,17 @@ $estatesItemPaddings: 20px;
         }
         &-title {
             // Default rules
+            height: $l_h_medium;
+            @include text_overflow;
             @include font_size_pro('h3');
             line-height: $l_h_medium;
             font-weight: bold;
             color: $text;
-
         }
         &-address {
             margin-top: 2px;
+            // height: $l_h_medium;
+            // @include text_overflow;            
             @include font_size_pro('base');
             line-height: $l_h_medium;
             color: $text;
@@ -83,6 +90,10 @@ $estatesItemPaddings: 20px;
             @include font_size_pro('base');
             line-height: $l_h_medium;
             color: $text;
+            &-value {
+                font-weight: bold;
+                font-style: normal;
+            }
         }
 
         &-notice {
@@ -100,6 +111,10 @@ $estatesItemPaddings: 20px;
                 transform: scale(1.08);
             }
         }
+        &:hover  {
+            border-color: darken($borders, 25%);
+        }
+
     }    
 
     // Blocks Modificators

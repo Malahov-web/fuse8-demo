@@ -14,7 +14,7 @@
 <body>
 
 
-<div id="page">
+<div id="page" style="display: none;">
 
     <section class="section section-title">
         <div class="container">
@@ -32,13 +32,16 @@
     <section class="section section-filter">
         <div class="container">
 
-            <div class="filter">
-                <div class="filter__field field">
-                    <div class="field-inner">
-                        <label for="filter_title">Filter</label>
-                        <input type="text" id="filter_title" name="filter_title">
+            <div class="row">
+                <div class="mv_12 tb_8 ds_5">
+                    <div class="filter">
+                        <div class="filter__field field">
+                            <div class="field-inner">
+                                <label for="filter_title">Filter</label>
+                                <input type="text" id="filter_title" name="filter_title">
+                            </div>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
 
@@ -129,11 +132,8 @@
 
 
 
-
-
-
     <noscript> <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong> </noscript>
-    <div class="app-outer"  style="display: none; margin-top: 1000px">
+    <div class="app-outer"  _style="display: none; margin-top: 1000px">
         <div id="app" ></div>
         <!-- built files will be auto injected -->  
     </div>

@@ -1,0 +1,46 @@
+/*
+ * Blocks vars
+ * Block and elements styles
+ * Other styles (Not block elems, but associated with it)
+ * Media rules - Mobile First, use min-width
+ * Default states
+ */
+
+// Block vars
+
+
+// Block and elements
+.filter {
+
+    // Block Elements    
+    &__field {
+
+    }
+
+    // Blocks Modificators
+
+    // Inheritance (for components)
+    .field {
+        // Ovverride or add rules
+        &-inner {
+            @include flex(start, center);
+
+            label {
+                margin-right: 1em;
+            }
+            input {
+
+            } 
+        }
+    }
+
+}
+
+// Not block elems, but associated with it
+.section-filter {
+    padding-top: 1.75*$l_h;
+}
+
+// Media rules - Mobile First, use min-width
+
+// Default states

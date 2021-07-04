@@ -1,0 +1,56 @@
+/*
+ * Blocks vars
+ * Block and elements styles
+ * Other styles (Not block elems, but associated with it)
+ * Media rules - Mobile First, use min-width
+ * Default states
+ */
+
+// Block vars
+$badgeVPaddings: 1/2*$l_h_medium;
+
+
+// Component
+.badge {
+    height: $l_h_medium + 2* $badgeVPaddings;
+    @include text_overflow;
+    padding: $badgeVPaddings  1em  $badgeVPaddings;
+    background-color: $borders;
+
+    @include font_size_pro('smaller'); // 12/16
+    line-height: $l_h_medium;
+    font-weight: bold;
+    text-align: center;
+    color: $white;
+
+    &:hover {
+
+    }
+    // Elements    
+
+    // Modificators
+    &--type--independent-living {
+        background-color: $orange;
+    }
+    &--type--support-available {
+        background-color: $green_alt;
+    }  
+
+    // Inheritance (for child components)
+    .otherblock {
+        // Ovverride rules
+    }
+}
+
+
+// Media rules - Mobile First, use min-width
+
+
+// Default states
+
+
+
+
+
+
+

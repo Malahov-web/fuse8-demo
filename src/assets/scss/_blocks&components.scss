@@ -1,6 +1,8 @@
 // UI Components
 
 @import '../views/components/buttons/buttons';   
+@import '../views/components/forms/forms';   
+@import '../views/components/badge/badge';   
 // @import '../view/components/social-links/social-links';     //
 // @import '../view/components/accordeon/accordeon';     //
 // @import '../view/components/rating/rating';     //
@@ -21,8 +23,8 @@
 
 // Blocks
 
-// Заменили  view -> views:
 @import '../views/blocks/estates/estates';     //
+@import '../views/blocks/filter/filter';     //
 
 
 // Special

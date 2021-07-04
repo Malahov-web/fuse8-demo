@@ -16,7 +16,7 @@ $modules_display: (
 
 $devices: ( 
     mv_: (
-        breakpoint: 320,
+        breakpoint: 0,
         container_max: 300,
         font_base: 16px,
         ms_coeff: 1.10,
@@ -28,9 +28,9 @@ $devices: (
         ms_coeff: 1.17,
     ), 
     ds_: (
-        breakpoint: 1024,
+        breakpoint: 992,
         container_max: 960,
-        font_base: 15px,
+        font_base: 16px,
         ms_coeff: 1.17
     ),
     hd_: (

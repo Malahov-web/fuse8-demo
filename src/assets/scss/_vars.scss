@@ -79,6 +79,7 @@ $font_family_head : "Open Sans", "Roboto",  Tahoma,  Arial, sans-serif;
 
 
 // 3. Borders
+$button_border_width: 1px;
 $bd_rad: 8px;
 
 
@@ -122,18 +123,27 @@ $font_size_names: (
 
 $fonts: ();
 
-
+    // mv_: (
+    //     smaller: 12,
+    //     small: 14,
+    //     base: 16,
+    //     h4: 18,
+    //     h3: 20,
+    //     h2: 24,
+    //     h1: 28,
+    // ), 
+    
 // // Real font sizes from Design (designer don't use modular scale)
 $fonts : (
 
     mv_: (
         smaller: 12,
         small: 14,
-        base: 16,
-        h4: 18,
-        h3: 20,
-        h2: 24,
-        h1: 28,
+        base: 15,
+        h4: 16,
+        h3: 18,
+        h2: 22,
+        h1: 26,
     ), 
 
     tb_: (

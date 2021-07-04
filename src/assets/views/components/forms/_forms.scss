@@ -1,0 +1,51 @@
+/*
+ *  Forms elements
+ *  
+ *  1. Input
+ *  1. Label
+*/
+
+
+
+/* 1. Input */
+
+#{$all-text-inputs}{
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+
+    margin: 0;
+    line-height: $l_h;
+    font-family: $font_family;
+    font-weight: 400; 
+    @extend %transition;
+
+    &::placeholder {
+        opacity: 1;
+    }
+}
+
+input {
+    height: calc( 2* #{$l_h} + 2* #{$button_border_width} );
+    padding: 0 2em;
+    border-radius: 1*$l_h;  
+
+    border: $button_border_width solid $borders;
+    @include font_size_pro('base');
+    font-weight: bold;
+    color: $text;      
+
+    &:focus {
+        border-color: darken($borders, 25%);
+    }
+}
+
+/* 2. Label */
+
+label {
+    @include font_size_pro('base');
+    line-height: $l_h;
+    font-weight: bold;
+    letter-spacing: $l_s_neg;
+    color: $text;
+}
