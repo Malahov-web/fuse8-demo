@@ -233,16 +233,3 @@
 }
 
 
-// v. old - only 1 breakpoint min-width
-// 
-// @mixin set_bg_adaptive($file_path, $breakpoint_prefix, $file_ext) {
-
-//     background: #fff url($file_path+'.'+$file_ext) 0 0 no-repeat;
-
-    
-//     // @media (min-width: #{map-get($devices, 'ds_')}px) {
-//     @media (min-width: $breakpoint_prefix+px) {
-        
-//         background-image: url($file_path+'-'+$breakpoint_prefix+'.'+$file_ext);
-//     }      
-// }

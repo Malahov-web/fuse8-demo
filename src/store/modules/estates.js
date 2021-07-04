@@ -6,6 +6,7 @@ export default {
     estatesSearched: [],
     searchStatus: false,
   },
+
   getters: {
     getEstates: (state) => {
       return state.estates;
@@ -19,6 +20,7 @@ export default {
       return state.searchStatus;
     },
   },
+
   mutations: {
     SET_ESTATES(state, estates) {
       state.estates = estates;
@@ -36,11 +38,12 @@ export default {
       state.searchStatus = searchStatus;
     },
   },
+
   actions: {
     fetchEstates({ commit }) {
       EstateServices.getEstates().then((response) => {
         commit("SET_ESTATES", response.data);
-        console.log("News has been fetched:", response); // <--- here
+        console.log("News has been fetched:", response);
       });
     },
 

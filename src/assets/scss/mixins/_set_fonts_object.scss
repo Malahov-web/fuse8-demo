@@ -1,45 +1,46 @@
 // Real font sizes from Design (designer don't use modular scale)
-// $fonts : (
 
-//     mv_: (
-//         smaller: 12,
-//         small: 14,
-//         base: 16,
-//         h4: 18,
-//         h3: 20,
-//         h2: 24,
-//         h1: 28,
-//     ), 
+$fonts : (
 
-//     tb_: (
-//         smaller: 12,
-//         small: 14,
-//         base: 16,
-//         h4: 18,
-//         h3: 20,
-//         h2: 26,
-//         h1: 36,
-//     ), 
-//     ds_: (
-//         smaller: 12,
-//         small: 14,
-//         base: 16,
-//         h4: 18,
-//         h3: 20,
-//         h2: 26,
-//         h1: 36,
-//     ), 
-//     hd_: (
-//         smaller: 12,
-//         small: 14,
-//         base: 16,
-//         h4: 18,
-//         h3: 20,
-//         h2: 26,
-//         h1: 36,
-//     )
+    mv_: (
+        smaller: 12,
+        small: 14,
+        base: 15,
+        h4: 16,
+        h3: 18,
+        h2: 22,
+        h1: 26,
+    ), 
+
+    tb_: (
+        smaller: 12,
+        small: 14,
+        base: 16,
+        h4: 18,
+        h3: 20,
+        h2: 26,
+        h1: 36,
+    ), 
+    ds_: (
+        smaller: 12,
+        small: 14,
+        base: 16,
+        h4: 18,
+        h3: 20,
+        h2: 26,
+        h1: 36,
+    ), 
+    hd_: (
+        smaller: 12,
+        small: 14,
+        base: 16,
+        h4: 18,
+        h3: 20,
+        h2: 26,
+        h1: 36,
+    )
      
-// );
+);
 
 
 
@@ -48,8 +49,7 @@
 
 
 
-
-// // TODO: почему-то не работает код если его обернуть в миксин
+// // TODO: не работает код если его обернуть в миксин
 
 
 // // make array $fonts from $devices and $font_size_names

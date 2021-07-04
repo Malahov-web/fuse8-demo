@@ -27,7 +27,7 @@ export default {
 
   methods: {
     onInput() {
-      // Обнулить результаты, если ввод очистили
+      // Reset results, if input clean
       if (this.inputText.length == 0) {
         setTimeout(() => {
           this.$store.dispatch("setSearchStatus", false);
@@ -36,12 +36,12 @@ export default {
         return;
       }
 
-      // Ничего не делать, если введено от 1-3 символа
+      // Nothing, if 1-3 chars entered
       if (this.inputText.length < 4) {
         return;
       }
 
-      // Найти, если введено
+      // Search results
       let inputText = this.inputText;
       setTimeout(() => {
         this.$store.dispatch("setSearchStatus", true);

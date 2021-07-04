@@ -8,7 +8,6 @@
 
 // Block vars
 $estatesItemPaddings: 20px;
-// $blocknameDecorBg: $globalColor;
 
 // Block and elements
 .estates {
@@ -32,14 +31,12 @@ $estatesItemPaddings: 20px;
         @extend %transition;
 
         &-image-outer {
-            // position: relative;
             display: block;
             // all card is link
             &:after {
                 @include pseudoelement_left_top(0, 0);
                 width: 100%;
                 height: 100%;
-                // background-color: transparentize($text, 1-0.5); // dev test
             }            
         }
         &-image {
@@ -68,7 +65,6 @@ $estatesItemPaddings: 20px;
             padding-bottom: 17px;         
         }
         &-title {
-            // Default rules
             height: $l_h_medium;
             @include text_overflow;
             @include font_size_pro('h3');
@@ -77,9 +73,7 @@ $estatesItemPaddings: 20px;
             color: $text;
         }
         &-address {
-            margin-top: 2px;
-            // height: $l_h_medium;
-            // @include text_overflow;            
+            margin-top: 2px;          
             @include font_size_pro('base');
             line-height: $l_h_medium;
             color: $text;
@@ -92,7 +86,6 @@ $estatesItemPaddings: 20px;
             color: $text;
             &-value {
                 font-weight: bold;
-                font-style: normal;
             }
         }
 
@@ -106,15 +99,14 @@ $estatesItemPaddings: 20px;
 
     // states
     &__item {
+        &:hover  {
+            border-color: darken($borders, 25%);
+        }        
         &:hover  &-image {
             img {
                 transform: scale(1.08);
             }
         }
-        &:hover  {
-            border-color: darken($borders, 25%);
-        }
-
     }    
 
     // Blocks Modificators

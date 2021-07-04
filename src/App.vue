@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <section class="section section-title">
       <div class="container">
         <div class="row">
@@ -14,7 +14,7 @@
       <div class="container">
         <div class="row">
           <div class="mv_12 tb_8 ds_5">
-            <FilterSearch class="asd"></FilterSearch>
+            <FilterSearch></FilterSearch>
           </div>
         </div>
       </div>
@@ -22,7 +22,7 @@
 
     <section class="section section-estates">
       <div class="container">
-        <Estates class="asd"></Estates>
+        <Estates></Estates>
 
         <div class="row section__footer">
           <div class="mv_12 centered">
@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import Estates from "./components/Estates.vue";
+import Estates from "./components/estates/Estates.vue";
 import FilterSearch from "./components/filter/Filter.vue";
 
 export default {
@@ -67,15 +67,5 @@ export default {
 </script>
 
 <style lang="scss">
-// @import "assets/src/scss/style";
 @import "assets/scss/style";
-
-// #app {
-//   font-family: Avenir, Helvetica, Arial, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   text-align: center;
-//   color: #2c3e50;
-//   margin-top: 60px;
-// }
 </style>

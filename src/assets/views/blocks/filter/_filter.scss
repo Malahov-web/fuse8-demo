@@ -23,14 +23,12 @@
     .field {
         // Ovverride or add rules
         &-inner {
-            @include flex(start, center);
+            // label and input in one line
+            @include flex(flex-start, center);
 
             label {
                 margin-right: 1em;
             }
-            input {
-
-            } 
         }
     }
 

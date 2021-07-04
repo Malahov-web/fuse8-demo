@@ -33,8 +33,9 @@ input {
     border: $button_border_width solid $borders;
     @include font_size_pro('base');
     font-weight: bold;
-    color: $text;      
-
+    color: $text;
+          
+    // states 
     &:focus {
         border-color: darken($borders, 25%);
     }
