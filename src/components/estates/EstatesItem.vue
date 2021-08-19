@@ -8,9 +8,9 @@
         />
         <div
           class="estates__item-badge badge"
-          :class="'badge--type--' + formatTypeToKebab(item.type)"
+          :class="'badge--type--' + formatTypeToKebab"
         >
-          {{ formatTypeToCapitalizedText(item.type) }}
+          {{ formatTypeToCapitalizedText }}
         </div>
       </div>
     </a>
@@ -52,51 +52,6 @@ export default {
   },
 
   computed: {
-    // v1
-    // formattedPrice() {
-    //   let price = this.item.price;
-    //   let formattedPrice = "";
-
-    //   let digitsArray = price.toString().split("").reverse();
-
-    //   // add ',' after each 3 digits
-    //   for (let i = 0; i < digitsArray.length; i++) {
-    //     formattedPrice += digitsArray[i];
-
-    //     if ((i + 1) % 3 == 0 && i < digitsArray.length - 1) {
-    //       formattedPrice += ",";
-    //     }
-    //   }
-
-    //   return formattedPrice.split("").reverse().join("");
-    // },
-
-    // v2
-    // 1. переворачиваем
-    // 2. делим на 3 части
-    // 3. склеиваем с разделителем
-    // formattedPrice() {
-    //   // let price = this.item.price;
-
-    //   // let priceReverseString = price.toString().split("").reverse();
-
-    //   let priceArray = chunk(priceReverseString, 3);
-
-    //   let priceComps = priceArray.map((item) => {
-    //     // return item.join("");
-    //     return item.reverse().join("");
-    //   }, "");
-
-    //   // let result = priceComps.join(",");
-    //   // let result = priceComps.reverse().join(",");
-
-    //   // return priceComps; // 000 864
-    //   // return priceComps.reverse(); // 864 000
-    //   // return priceComps.reverse().join(",").split().reverse(); // 864 000
-
-    //   return priceComps.reverse().join(",");
-    // },
-    //
     // v3
     formattedPrice() {
       let price = this.item.price;
@@ -107,63 +62,19 @@ export default {
 
       let priceComps = priceArray.map((item) => {
         return item.join("");
-        // return item.reverse().join("");
       }, "");
 
-      // let priceString = priceComps.join(); // "000,864 "
-      // let priceString = priceComps.reverse().join(); // "864,000 "
       let priceString = priceComps.join().split("").reverse().join("");
 
       return priceString;
     },
-  },
 
-  methods: {
-    formatTypeToKebab(type) {
-      return kebabCase(type);
+    formatTypeToKebab() {
+      return kebabCase(this.item.type);
     },
 
-    // // v1
-    // formatTypeToCapitalizedText(type) {
-    //   let wordsArray = lowerCase(type).split(" ");
-
-    //   let wordsCapitalizedArray = wordsArray.map((item) => {
-    //     return upperFirst(item);
-    //   });
-
-    //   return wordsCapitalizedArray.join(" ");
-    // },
-
-    // // v2
-    // // Есть строка "IndependentLiving"
-    // // Нужно получить Строку "Independent Living"
-    // // Т.е. добавить пробел
-    // formatTypeToCapitalizedText(type) {
-    //   let wordsArray = lowerCase(type).split(" "); // [string, string]
-
-    //   let result = wordsArray.reduce((sum, current, index, array) => {
-    //     let separator = index < array.length - 1 ? " " : "";
-    //     return sum + upperFirst(current) + separator;
-    //   }, "");
-
-    //   return result;
-    // },
-
-    // // v3
-    // // Склеим строку с reduce - и обрежем пробелы с краев
-    // formatTypeToCapitalizedText(type) {
-    //   let wordsArray = lowerCase(type).split(" "); // [string, string]
-
-    //   let result = wordsArray.reduce((sum, current) => {
-    //     return sum + upperFirst(current) + " ";
-    //   }, "");
-
-    //   return result.trim();
-    // },
-
-    // v4
-    // Склеим строку с reduce - и обрежем пробелы с краев
-    formatTypeToCapitalizedText(type) {
+    formatTypeToCapitalizedText() {
+      let type = this.item.type;
       let wordsArray = lowerCase(type).split(" "); // [string, string]
 
       return wordsArray
