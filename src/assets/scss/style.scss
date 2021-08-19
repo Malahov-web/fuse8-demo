@@ -20,12 +20,7 @@
 @import 'mixins';
 @import 'base';         // base, 
 
-// @import 'components';   // moved to -> _base
 @import 'blocks&components';   // moved to -> _base
-// @import 'print';     // print v styles
-
-// $accent: #3c9;
-// $accent: #9c3;
 
 
 /* 1. General, structure
@@ -47,7 +42,6 @@
 
 .page-title {
     @include font_size_pro('h1');
-    // line-height: $l_h_head;   // 43 h  +  48 отступ у фильтра
     line-height: $l_h_medium; // 50 h  +  43  отступ у фильтра
     font-weight: bold;
     text-align: center;
@@ -94,26 +88,6 @@
 }
 
 
-// .badge {
-//     padding: 1/2*$l_h_medium  1em  1/2*$l_h_medium;
-//     background-color: $borders;
-
-//     @include font_size_pro('smaller'); // 12/16
-//     line-height: $l_h_medium;
-//     font-weight: bold;
-//     text-align: center;
-//     color: $white;
-
-//     // Mods
-//     &--type--independent-living {
-//         background-color: $orange;
-//     }
-//     &--type--support-available {
-//         background-color: $green_alt;
-//     }    
-
-
-// }
 
 
 // Test:
@@ -127,21 +101,6 @@ body {
         height: 100%;
 
         opacity: 0.8;
-
-
-        // background: url('page.jpg') center center no-repeat; // -
-        // background: url('../page.jpg') center center no-repeat;
-
-        // background: url('./src/page.jpg') center center no-repeat;        
-        // background: url('./public/page.jpg') center center no-repeat;
-
-        // background: url('./public/page.jpg') center center no-repeat;
-
-        // scss/page.jpg
-       // background: url('page.jpg') center center no-repeat; // -
-       // background: url('../../../../../page.jpg') center center no-repeat; // -
-       // 
-        // background: url('./public/page.jpg') center center no-repeat;
 
         background: url('http://malahov-web.com/demo/fuse8-demo/page.jpg')  center 0 no-repeat;
     }

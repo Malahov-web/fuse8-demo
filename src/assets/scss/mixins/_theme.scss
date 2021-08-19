@@ -21,25 +21,19 @@ $settings_font_size_pro: (
     @each $fonts_device, $fonts_obj in $fonts {
 
         $curr_font_size: map-get($fonts_obj, $type);
-        // @debug "curr_font_size_ : #{$curr_font_size}";
-        // @debug "prev_font_size : #{$prev_font_size}";
-
 
         @if ( $curr_font_size != $prev_font_size ) {
 
             $prev_font_size: $curr_font_size;
 
-            // @media (min-width: #{map-get($devices, $fonts_device)}px) {                
             @media (min-width: #{  bp($fonts_device) }px) {                
 
                 $font_size: map-get($fonts_obj, $type);
 
                 @if  map-get($settings_font_size_pro, round_values) == 1  {
-                    // font-size:   round($font_size) ;
                     font-size:   #{round($font_size)}px;
                 } @else {
-                    // font-size: $font_size;
-                    // font-size: $font_size+'px'; // -
+
                     font-size: #{$font_size}px; 
                 }
 
